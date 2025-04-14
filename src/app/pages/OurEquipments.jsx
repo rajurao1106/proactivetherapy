@@ -1,19 +1,19 @@
-"use client"
 import React from "react";
+import Image from "next/image";
 import { Image as ImageIcon, ZoomIn, X } from "lucide-react";
-import Equipment1 from "../images/About/Equipment1.jpg";
-import Equipment2 from "../images/About/Equipment2.jpg";
-import Equipment3 from "../images/About/Equipment3.jpg";
-import Equipment4 from "../images/About/Equipment4.webp";
-import Equipment5 from "../images/About/Equipment5.jpg";
-import Equipment6 from "../images/About/Equipment6.jpg";
-import Equipment7 from "../images/About/Equipment7.jpg";
-import Equipment8 from "../images/About/Equipment8.jpg";
-import Equipment9 from "../images/About/Equipment9.jpg";
-import Equipment10 from "../images/About/Equipment10.webp";
-import Equipment11 from "../images/About/Equipment11.jpg";
-import Equipment12 from "../images/About/Equipment12.jpg";
-import Equipment13 from "../images/About/Equipment13.webp";
+import Equipment1 from "../assets/images/About/Equipment1.jpg";
+import Equipment2 from "../assets/images/About/Equipment2.jpg";
+import Equipment3 from "../assets/images/About/Equipment3.jpg";
+import Equipment4 from "../assets/images/About/Equipment4.webp";
+import Equipment5 from "../assets/images/About/Equipment5.jpg";
+import Equipment6 from "../assets/images/About/Equipment6.jpg";
+import Equipment7 from "../assets/images/About/Equipment7.jpg";
+import Equipment8 from "../assets/images/About/Equipment8.jpg";
+import Equipment9 from "../assets/images/About/Equipment9.jpg";
+import Equipment10 from "../assets/images/About/Equipment10.webp";
+import Equipment11 from "../assets/images/About/Equipment11.jpg";
+import Equipment12 from "../assets/images/About/Equipment12.jpg";
+import Equipment13 from "../assets/images/About/Equipment13.webp";
 
 // Gallery images data
 const galleryImages = [
@@ -78,7 +78,7 @@ export default function OurEquipments() {
         <div className="flex flex-wrap justify-center items-center gap-6">
           {galleryImages.map((image) => (
             <div className="p-2 border rounded-lg overflow-hidden shadow-md">
-              <img
+              <Image
                 loading="lazy"
                 src={image.image}
                 className="w-[16rem] h-[13rem] rounded-md"

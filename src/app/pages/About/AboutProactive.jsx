@@ -1,6 +1,6 @@
-"use client"
-import React from "react"; 
-import physiotherapy from "../images/About/physiotherapy.jpg";
+import React from "react";
+import Image from "next/image";
+import physiotherapy from "../../assets/images/About/physiotherapy.jpg";
 
 export default function AboutProactive() {
   return (
@@ -19,7 +19,7 @@ export default function AboutProactive() {
         </div>
 
         <div className="flex gap-20 max-lg:flex-col">
-          <img
+          <Image
             loading="lazy"
             src={physiotherapy}
             alt=""

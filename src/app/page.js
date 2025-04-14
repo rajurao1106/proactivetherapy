@@ -1,14 +1,11 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import Homepage from "@/homepage/Homepage";
+"use client";
 import Image from "next/image";
+import Homepage from "./pages/Homepage/Homepage";
 
 export default function Home() {
   return (
     <div >
-      <Navbar/>
       <Homepage/>
-      <Footer/>
     </div>
   );
 }

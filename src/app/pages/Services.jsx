@@ -1,24 +1,24 @@
-"use client"
 import React from "react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import Back_Pain from "../images/Services/Back Pain.jpg";
-import Cervical_Spondylitis from "../images/Services/Cervical Spondylitis 1.jpg";
-import Cervical_Spondylitis2 from "../images/Services/Cervical Spondylitis 2.jpg";
-import Cupping from "../images/Services/Cupping.webp";
-import Frozen_Shoulder1 from "../images/Services/Tennis Elbow.jpg";
-import handsome_man_with_shoulder_pain from "../images/Services/handsome-man-with-shoulder-pain.jpg";
-import Needling from "../images/Services/Needling.jpg";
-import Slip_Disc from "../images/Services/Slip Disc.jpg";
-import Osteoarthritis1 from "../images/Services/Osteoarthritis 1.jpg";
-import Osteoarthritis2 from "../images/Services/Osteoarthritis 2.jpg";
-import Paralysis1 from "../images/Services/Paralysis 1.jpg";
-import Sciatica from "../images/Services/Sciatica.jpg";
-import Post_Fracture_Stiffness1 from "../images/Services/Post Fracture Stiffness 1.jpg";
-import Post_Fracture_Stiffness2 from "../images/Services/Hand Pain.jpg";
-import Nutritional_Healing from "../images/Services/Nutritional Healing.jpg";
-import Frozen_Shoulder2 from "../images/Services/Frozen Shoulder 1.png";
-import Pelvic_Floor_Exercises from "../images/Services/Pelvic Floor Exercises.jpg";
-import Weight_Reduction from "../images/Services/Weight Reduction.jpg";
+import Back_Pain from "../assets/images/Services/Back Pain.jpg";
+import Cervical_Spondylitis from "../assets/images/Services/Cervical Spondylitis 1.jpg";
+import Cervical_Spondylitis2 from "../assets/images/Services/Cervical Spondylitis 2.jpg";
+import Cupping from "../assets/images/Services/Cupping.webp";
+import Frozen_Shoulder1 from "../assets/images/Services/Tennis Elbow.jpg";
+import handsome_man_with_shoulder_pain from "../assets/images/Services/handsome-man-with-shoulder-pain.jpg";
+import Needling from "../assets/images/Services/Needling.jpg";
+import Slip_Disc from "../assets/images/Services/Slip Disc.jpg";
+import Osteoarthritis1 from "../assets/images/Services/Osteoarthritis 1.jpg";
+import Osteoarthritis2 from "../assets/images/Services/Osteoarthritis 2.jpg";
+import Paralysis1 from "../assets/images/Services/Paralysis 1.jpg";
+import Sciatica from "../assets/images/Services/Sciatica.jpg";
+import Post_Fracture_Stiffness1 from "../assets/images/Services/Post Fracture Stiffness 1.jpg";
+import Post_Fracture_Stiffness2 from "../assets/images/Services/Hand Pain.jpg";
+import Nutritional_Healing from "../assets/images/Services/Nutritional Healing.jpg";
+import Frozen_Shoulder2 from "../assets/images/Services/Frozen Shoulder 1.png";
+import Pelvic_Floor_Exercises from "../assets/images/Services/Pelvic Floor Exercises.jpg";
+import Weight_Reduction from "../assets/images/Services/Weight Reduction.jpg";
 
 import { Link } from "react-scroll";
 
@@ -98,7 +98,7 @@ function Services() {
             >
               <div className="flex items-start space-x-3 flex-col w-[18rem]">
                 {/* <CheckCircle2 className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" /> */}
-                <img
+                <Image
                   loading="lazy"
                   src={service.image}
                   alt=""

@@ -1,10 +1,10 @@
-"use client"
 import React from "react";
+import Image from "next/image";
 import { Image as ImageIcon, ZoomIn, X } from "lucide-react";
-import gallery1 from "../images/About/gallery1.jpg";
-import gallery2 from "../images/About/gallery2.jpg";
-import gallery3 from "../images/About/gallery3.jpg";
-import gallery4 from "../images/About/gallery4.jpg";
+import gallery1 from "../assets/images/About/gallery1.jpg";
+import gallery2 from "../assets/images/About/gallery2.jpg";
+import gallery3 from "../assets/images/About/gallery3.jpg";
+import gallery4 from "../assets/images/About/gallery4.jpg";
 
 // Gallery images data
 const galleryImages = [
@@ -34,7 +34,7 @@ const galleryImages = [
   },
 ];
 
-export default function Gellary() {
+export default function Gallery() {
   return (
     <div
       className="w-full flex flex-col justify-center items-center py-5"
@@ -53,7 +53,7 @@ export default function Gellary() {
               key={image.id}
               className="border hover:scale-110 transition hover:shadow-lg hover:shadow-gray-400 rounded-lg overflow-hidden shadow-md max-lg:m-5"
             >
-              <img
+              <Image
                 loading="lazy"
                 src={image.url}
                 alt={image.title}

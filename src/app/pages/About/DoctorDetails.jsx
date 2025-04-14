@@ -1,6 +1,6 @@
-"use client"
 import React from "react";
-import DrSonaliShadangi from "../images/About/DrSonaliShadangi.jpg";
+import Image from "next/image";
+import DrSonaliShadangi from "../../assets/images/About/DrSonaliShadangi.jpg";
 
 export default function DoctorDetails() {
   return (
@@ -43,7 +43,7 @@ export default function DoctorDetails() {
           </div>
 
           {/* Image Section */}
-          <img
+          <Image
             loading="lazy"
             src={DrSonaliShadangi}
             alt="Dr. Sonali Shadangi"

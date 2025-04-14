@@ -1,10 +1,10 @@
-"use client"
 import React from "react";
+import Image from "next/image";
 import { ArrowRight, Calendar, Award, Users } from "lucide-react";
 import { Link } from "react-scroll";
-import hero_image from "../images/Homepage/hero-image3.png";
-import hero_image2 from "../images/Homepage/hero-image2.jpg";
-import Image from 'next/image'
+import hero_image from "../../assets/images/Homepage/hero-image3.png";
+import hero_image2 from "../../assets/images/Homepage/hero-image2.jpg";
+
 
 function Hero() {
   return (
@@ -15,12 +15,12 @@ function Hero() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-red-900 to-red-900/75 z-10" />
           <Image
-            priority
+            loading="lazy"
             src={hero_image2}
             alt="Physiotherapy Session"
             className="w-full h-full object-cover"
           />
-        </div>  
+        </div>
 
         {/* Hero Content */}
         <div className="relative z-20 container mx-auto px-6 ">
@@ -81,8 +81,56 @@ function Hero() {
               </div>
             </div>
 
-           
-            <Image priority src={hero_image} alt="" className="w-[35rem]" />
+            {/* Right Column - Appointment Card */}
+            {/* <div className=""> */}
+            {/* <h3 className="text-2xl font-bold text-gray-900 mb-6">Schedule a Consultation</h3> */}
+            {/* <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                  <input 
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <input 
+                    type="tel"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Preferred Date</label>
+                  <input 
+                    type="date"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Treatment Type</label>
+                  <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Select treatment type</option>
+                    <option value="sports">Sports Injury</option>
+                    <option value="orthopedic">Orthopedic Rehabilitation</option>
+                    <option value="neurological">Neurological Rehabilitation</option>
+                    <option value="pain">Pain Management</option>
+                  </select>
+                </div>
+                <button 
+                  type="submit"
+                  className="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
+                >
+                  Request Appointment
+                </button>
+              </form> */}
+            <Image
+              loading="lazy"
+              src={hero_image}
+              alt=""
+              className="w-[35rem]"
+            />
             {/* </div> */}
           </div>
         </div>

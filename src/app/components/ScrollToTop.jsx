@@ -1,4 +1,3 @@
-"use client"
 import React, { useState, useEffect } from "react";
 import scroll from "../assets/images/utils/home.png";
 import { FaArrowUp } from "react-icons/fa6";

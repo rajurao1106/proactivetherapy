@@ -1,13 +1,6 @@
-"use client"
 import React from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Facebook,
-  Instagram,
-} from "lucide-react";
+import Image from "next/image";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-scroll";
 
 const openingHours = [
@@ -26,10 +19,12 @@ function OpeningHours() {
       <h3 className="text-white text-lg font-semibold mb-4">Opening Hours</h3>
       <div className="space-y-2">
         {openingHours.map((item, index) => (
-          <div key={index} className="flex justify-between text-md gap-0">
+          <div key={index} className="flex justify-between text-md gap-4">
             <span>{item.day}:</span>
             <span className={item.day === "Sunday" ? "text-yellow-500" : ""}>
-              {item.time} <br />{item.from}
+              {item.time}
+              {item.from && <br />}
+              {item.from}
             </span>
           </div>
         ))}
@@ -41,7 +36,6 @@ function OpeningHours() {
 function Footer() {
   return (
     <div className="bg-gray-100 flex flex-col">
-      {/* Enhanced Footer */}
       <footer className="bg-gray-900 text-gray-300">
         <div className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -91,7 +85,7 @@ function Footer() {
               </ul>
             </div>
 
-            {/* Opening Hours Component */}
+            {/* Opening Hours */}
             <OpeningHours />
 
             {/* Social Media */}
@@ -103,12 +97,16 @@ function Footer() {
                 <a
                   href="https://www.facebook.com/profile.php?id=100063483956528"
                   className="hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Facebook className="w-6 h-6" />
                 </a>
                 <a
                   href="https://www.instagram.com/proactive_physiotherapy/"
                   className="hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Instagram className="w-6 h-6" />
                 </a>
@@ -123,7 +121,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Copyright Bar */}
+        {/* Copyright */}
         <div className="border-t border-gray-800">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col md:flex-row justify-between items-center">

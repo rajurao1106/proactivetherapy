@@ -1,8 +1,8 @@
-"use client"
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react"; // Icons for a modern look
-import logo from "../images/About/Pro active logo.png";
+import logo from "../assets/images/About/Pro active logo.png";
 import { Link } from "react-scroll";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ export default function Navbar() {
       smooth: true,
       offset: -150,
       duration: 500,
-      function: () => setIsOpen(!isOpen)
+      function: () => setIsOpen(!isOpen),
     },
     {
       menu: "About",
@@ -22,7 +22,7 @@ export default function Navbar() {
       smooth: true,
       offset: -150,
       duration: 500,
-      function: () => setIsOpen(!isOpen)
+      function: () => setIsOpen(!isOpen),
     },
     {
       menu: "Services",
@@ -30,7 +30,7 @@ export default function Navbar() {
       smooth: true,
       offset: -150,
       duration: 500,
-      function: () => setIsOpen(!isOpen)
+      function: () => setIsOpen(!isOpen),
     },
     {
       menu: "Gallery",
@@ -38,7 +38,7 @@ export default function Navbar() {
       smooth: true,
       offset: -150,
       duration: 500,
-      function: () => setIsOpen(!isOpen)
+      function: () => setIsOpen(!isOpen),
     },
 
     {
@@ -47,7 +47,7 @@ export default function Navbar() {
       smooth: true,
       offset: -150,
       duration: 500,
-      function: () => setIsOpen(!isOpen)
+      function: () => setIsOpen(!isOpen),
     },
   ];
 
@@ -56,7 +56,7 @@ export default function Navbar() {
       <div className="w-full max-w-[1200px] flex justify-between items-center p-3 mx-auto">
         {/* Logo */}
         <Link to="home" smooth={true} offset={-150} duration={500}>
-          <img loading="lazy" src={logo} alt="" className="w-[10rem]" />
+          <Image loading="lazy" src={logo} alt="" className="w-[10rem]" />
         </Link>
 
         {/* Navigation Links */}
@@ -116,7 +116,13 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="py-2 w-full text-center cursor-pointer bg-[#D62828] text-white font-semibold rounded-md px-4 hover:bg-red-700 transition-all duration-300">
-            <Link to="contact" smooth={true} offset={-150} duration={500} onClick={() => setIsOpen(!isOpen)}>
+            <Link
+              to="contact"
+              smooth={true}
+              offset={-150}
+              duration={500}
+              onClick={() => setIsOpen(!isOpen)}
+            >
               Contact Us
             </Link>
           </div>
